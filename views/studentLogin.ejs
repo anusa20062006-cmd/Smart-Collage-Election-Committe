@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="login-page student-page">
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Student Login</h1>
+            <p>Login to access the college election portal.</p>
+
+            <form action="/student/login" method="POST">
+                <label for="studentId">Student ID</label>
+                <input type="text" id="studentId" name="studentId"
+                       placeholder="Enter your student ID" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password"
+                       placeholder="Enter your password" required>
+
+                <button type="submit" class="login-submit">Login</button>
+            </form>
+
+            <a href="/">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

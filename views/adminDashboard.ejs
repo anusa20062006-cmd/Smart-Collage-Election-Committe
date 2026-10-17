@@ -1,3 +1,133 @@
-app.get("/admin/dashboard", (req, res) => {
-    res.render("adminDashboard");
-});
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Smart College Election Committee</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <!-- Dashboard Navigation -->
+    <nav class="dashboard-nav">
+        <div class="dashboard-logo">
+            🗳️ Smart Election
+        </div>
+
+        <a href="/" class="logout-btn">Back to Home</a>
+    </nav>
+
+    <main class="dashboard-container">
+
+        <!-- Welcome Section -->
+        <section class="dashboard-heading">
+            <p class="section-label">ADMIN CONTROL PANEL</p>
+
+            <h1>Admin Dashboard</h1>
+
+            <p>
+                Manage students, candidates and college election
+                activities from one place.
+            </p>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats-container">
+
+            <div class="stat-card">
+                <h3>Total Students</h3>
+                <p class="stat-number">0</p>
+                <span>Registered students</span>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Candidates</h3>
+                <p class="stat-number">0</p>
+                <span>Candidate applications</span>
+            </div>
+
+            <div class="stat-card">
+                <h3>Approved Candidates</h3>
+                <p class="stat-number">0</p>
+                <span>Approved for election</span>
+            </div>
+
+            <div class="stat-card">
+                <h3>Election Status</h3>
+                <p class="stat-status">Not Started</p>
+                <span>Current election</span>
+            </div>
+
+        </section>
+
+        <!-- Management Options -->
+        <section class="management-section">
+
+            <h2>Election Management</h2>
+
+            <div class="management-grid">
+
+                <div class="management-card">
+                    <div class="management-icon">👥</div>
+                    <h3>Student Management</h3>
+                    <p>
+                        View and manage registered students
+                        participating in the college election.
+                    </p>
+                    <button type="button"
+                        onclick="alert('Student Management will be implemented in the next phase.')">
+                        Manage Students
+                    </button>
+                </div>
+
+                <div class="management-card">
+                    <div class="management-icon">🧑‍🎓</div>
+                    <h3>Candidate Management</h3>
+                    <p>
+                        Review candidate applications and
+                        approve or reject candidates.
+                    </p>
+                    <a href="/admin/candidates" class="primary-btn">
+    Manage Candidates
+</a>
+                </div>
+
+                <div class="management-card">
+                    <div class="management-icon">🗳️</div>
+                    <h3>Election Management</h3>
+                    <p>
+                        Create elections and configure voting
+                        periods and election status.
+                    </p>
+                    <button type="button"
+                        onclick="alert('Election Management will be implemented in the next phase.')">
+                        Manage Election
+                    </button>
+                </div>
+
+                <div class="management-card">
+                    <div class="management-icon">📊</div>
+                    <h3>Results &amp; Analytics</h3>
+                    <p>
+                        View voting statistics and analyze
+                        election results after voting.
+                    </p>
+                    <button type="button"
+                        onclick="alert('Results and Analytics will be implemented in the next phase.')">
+                        View Analytics
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
+
+

@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Candidate Login | Smart Election Committee</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="login-page candidate-page">
+
+    <main class="login-container">
+
+        <section class="login-box">
+
+            <div class="login-icon">🗳️</div>
+
+            <p class="login-label">CANDIDATE PORTAL</p>
+
+            <h1>Welcome, Candidate!</h1>
+
+            <p class="login-description">
+                Sign in to manage your election participation and
+                access your candidate portal.
+            </p>
+
+            <form action="/candidate/login" method="POST">
+
+                <label for="candidateId">Candidate ID</label>
+
+                <input
+                    type="text"
+                    id="candidateId"
+                    name="candidateId"
+                    placeholder="Enter your candidate ID"
+                    autocomplete="username"
+                    required
+                >
+
+                <label for="password">Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button type="submit" class="login-submit">
+                    Sign In to Candidate Portal
+                </button>
+
+            </form>
+
+            <a href="/" class="back-link">
+                ← Back to Home
+            </a>
+
+            <p class="login-footer">
+                Smart College Election Committee
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

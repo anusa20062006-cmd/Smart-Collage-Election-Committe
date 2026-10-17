@@ -3,7 +3,17 @@ const session = require("express-session");
 const dotenv = require("dotenv");
 const path = require("path");
 
+const mongoose = require("mongoose");
+
 dotenv.config();
+// Connect to MongoDB Atlas
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => {
+    console.log("MongoDB connected successfully!");
+  })
+  .catch((err) => {
+    console.error("MongoDB connection failed:", err.message);
+  });
 
 const app = express();
 
@@ -68,6 +78,15 @@ app.get("/admin/dashboard", (req, res) => {
     }
 
     res.render("adminDashboard");
+});
+// Candidate Management Page
+app.get("/admin/candidates", (req, res) => {
+
+    if (!req.session.adminLoggedIn) {
+        return res.redirect("/admin/login");
+    }
+
+    res.render("candidateManagement");
 });
 
 const PORT = process.env.PORT || 3000;
